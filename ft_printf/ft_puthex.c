@@ -6,7 +6,7 @@
 /*   By: epark <epark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 17:13:10 by epark             #+#    #+#             */
-/*   Updated: 2022/09/05 18:52:58 by epark            ###   ########.fr       */
+/*   Updated: 2022/09/06 15:33:41 by epark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ static int	counthex(unsigned long long num)
 	int	count;
 
 	count = 1;
-	while(num > 9)
+	while(num >= 16)
 	{
-		num = num / 10;
+		num = num / 16;
 		count++;
 	}
 	return (count);

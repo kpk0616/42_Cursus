@@ -6,7 +6,7 @@
 /*   By: epark <epark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:06:11 by epark             #+#    #+#             */
-/*   Updated: 2022/09/05 19:14:23 by epark            ###   ########.fr       */
+/*   Updated: 2022/09/06 16:29:49 by epark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,10 @@ int	ft_printf(const char *format, ...) // ex: printf("Hello %s", "Minsoo"); к∞Ал
 	return (sum);
 }
 
-#include <stdio.h>
-int main()
-{
-	// char* str = "abc";
-	int n = ft_printf("%p\n", "");
-	printf("%p\n", "");
-	printf("n: %d", n);
-}
+// #include <stdio.h>
+// int main()
+// {
+// 	int ft = ft_printf("%%\n", 3);
+// 	int pf = printf("%%\n", 3);
+// 	printf("ft : %d\npf : %d\n", ft, pf);
+// }
