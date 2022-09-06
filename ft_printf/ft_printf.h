@@ -6,15 +6,15 @@
 /*   By: epark <epark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 17:05:20 by epark             #+#    #+#             */
-/*   Updated: 2022/09/05 18:51:52 by epark            ###   ########.fr       */
+/*   Updated: 2022/09/06 16:48:40 by epark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include <stdarg.h>
-#include <unistd.h>
+# include <stdarg.h>
+# include <unistd.h>
 
 int	ft_putchar(char c);
 int	ft_putstr(char *str);

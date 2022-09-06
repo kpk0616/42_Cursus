@@ -6,7 +6,7 @@
 /*   By: epark <epark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:06:11 by epark             #+#    #+#             */
-/*   Updated: 2022/09/06 16:29:49 by epark            ###   ########.fr       */
+/*   Updated: 2022/09/06 16:48:15 by epark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 int	callspecifier(char c, va_list args)
 {
-	unsigned long long	p; // unsigned long long 을 쓰는 이유?
+	unsigned long long	p;
 
 	if (c == 'c')
-		return (ft_putchar((char)va_arg(args, int))); // int 로 받는 이유?
+		return (ft_putchar((char)va_arg(args, int)));
 	else if (c == 's')
 		return (ft_putstr(va_arg(args, char *)));
-	else if (c == 'x' || c == 'X') // unsigned 16진수 출력 - x / X : 진수 대소문자 차이
+	else if (c == 'x' || c == 'X')
 		return (ft_puthex(va_arg(args, int), c));
 	else if (c == '%')
 		return (ft_putchar('%'));
-	else if (c == 'd' || c == 'i') // 10진수 정수 출력
+	else if (c == 'd' || c == 'i')
 		return (ft_itoa(va_arg(args, int)));
-	else if (c == 'u') // unsigned 10진수 출력
+	else if (c == 'u')
 		return (ft_uitoa(va_arg(args, int)));
-	else if (c == 'p') // 포인터 변수 주소 출력
+	else if (c == 'p')
 	{
 		p = va_arg(args, unsigned long long);
 		if (p == 0)
@@ -39,7 +39,7 @@ int	callspecifier(char c, va_list args)
 	return (0);
 }
 
-int	ft_printf(const char *format, ...) // ex: printf("Hello %s", "Minsoo"); 가변 인자는 "Hello %s" 에서 시작, va_arg 시 "Minsoo" 로 옮겨짐
+int	ft_printf(const char *format, ...)
 {
 	va_list	args;
 	int		i;
@@ -49,14 +49,14 @@ int	ft_printf(const char *format, ...) // ex: printf("Hello %s", "Minsoo"); 가�
 		return (0);
 	i = 0;
 	sum = 0;
-	va_start(args, format); // 가변 인자가 첫 인자인 format 에서 시작하도록 함
+	va_start(args, format);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
 			if (format[i] == 0)
-				break;
+				break ;
 			sum += callspecifier(format[i], args);
 		}
 		else
@@ -66,11 +66,3 @@ int	ft_printf(const char *format, ...) // ex: printf("Hello %s", "Minsoo"); 가�
 	va_end(args);
 	return (sum);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	int ft = ft_printf("%%\n", 3);
-// 	int pf = printf("%%\n", 3);
-// 	printf("ft : %d\npf : %d\n", ft, pf);
-// }

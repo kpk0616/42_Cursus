@@ -6,7 +6,7 @@
 /*   By: epark <epark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 17:13:10 by epark             #+#    #+#             */
-/*   Updated: 2022/09/06 15:33:41 by epark            ###   ########.fr       */
+/*   Updated: 2022/09/06 16:49:24 by epark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	counthex(unsigned long long num)
 	int	count;
 
 	count = 1;
-	while(num >= 16)
+	while (num >= 16)
 	{
 		num = num / 16;
 		count++;
@@ -34,8 +34,8 @@ static void	putnbr_base(unsigned long long num, char *base)
 
 int	ft_puthex(int n, char c)
 {
-	char	*base;
-	int		count;
+	char			*base;
+	int				count;
 	unsigned int	num;
 
 	base = "0123456789abcdef";
@@ -55,7 +55,6 @@ int	ft_putpointer(unsigned long long num)
 
 	base = "0123456789abcdef";
 	count = 0;
-
 	putnbr_base(num, base);
 	count += counthex(num);
 	return (count);

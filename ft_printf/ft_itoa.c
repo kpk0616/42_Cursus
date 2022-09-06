@@ -6,7 +6,7 @@
 /*   By: epark <epark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 17:14:50 by epark             #+#    #+#             */
-/*   Updated: 2022/09/05 17:48:15 by epark            ###   ########.fr       */
+/*   Updated: 2022/09/06 16:42:19 by epark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static long	countdigit(long num)
 	int	digit;
 
 	digit = 1;
-	while(num > 9)
+	while (num > 9)
 	{
 		num = num / 10;
 		digit++;
