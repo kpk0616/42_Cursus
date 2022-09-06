@@ -6,7 +6,7 @@
 /*   By: epark <epark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 15:35:30 by epark             #+#    #+#             */
-/*   Updated: 2022/08/04 18:48:36 by epark            ###   ########.fr       */
+/*   Updated: 2022/08/08 21:02:30 by epark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,11 @@ static char	*ft_extract(char *line)
 		result = NULL;
 		return (NULL);
 	}
+	// if (line != NULL)
+	// {
+	// 	free(line);
+	// 	line = (char *)malloc(sizeof(char) * (i + 2));
+	// }
 	line[i + 1] = '\0';
 	return (result);
 }
