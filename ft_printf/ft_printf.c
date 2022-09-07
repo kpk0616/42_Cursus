@@ -6,13 +6,13 @@
 /*   By: epark <epark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:06:11 by epark             #+#    #+#             */
-/*   Updated: 2022/09/07 15:29:25 by epark            ###   ########.fr       */
+/*   Updated: 2022/09/07 15:42:56 by epark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	callspecifier(char c, va_list args)
+static int	callspecifier(char c, va_list args)
 {
 	unsigned long long	p;
 
@@ -66,10 +66,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (sum);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	int n = printf("%s", NULL);
-// 	printf("%d", n);
-// }
