@@ -6,7 +6,7 @@
 /*   By: epark <epark@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:06:11 by epark             #+#    #+#             */
-/*   Updated: 2022/09/06 16:48:15 by epark            ###   ########.fr       */
+/*   Updated: 2022/09/07 15:29:25 by epark            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,3 +66,10 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (sum);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	int n = printf("%s", NULL);
+// 	printf("%d", n);
+// }
